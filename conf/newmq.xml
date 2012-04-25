@@ -1,0 +1,36 @@
+<newmq>
+	<remotingserver>
+		<!-- 绑定的ip地址 -->
+		<bindaddr>127.0.0.1</bindaddr>
+		<!-- 绑定的端口 -->
+		<bindport>9999</bindport>
+		<!-- mina启动的线程数量，类似于selector的功能 -->
+		<processornum>5</processornum>
+	</remotingserver>
+	<dbservice>
+		<!-- 用来处理提交请求的进程数目 -->
+		<processornum>5</processornum>
+		<dbserver>
+			<tableflag>user_account</tableflag>
+			<uri>jdbc:mysql://localhost:3306</uri>
+			<user>root</user>
+			<password></password>
+			<initialsize>1</initialsize>
+			<maxactive>20</maxactive>
+			<maxidle>20</maxidle>
+		</dbserver>
+		<dbserver>
+			<tableflag>user_info</tableflag>
+			<uri>jdbc:mysql://localhost:3306</uri>
+			<user>root</user>
+			<password></password>
+			<initialsize>1</initialsize>
+			<maxactive>20</maxactive>
+			<maxidle>20</maxidle>
+		</dbserver>
+	</dbservice>
+	<persistenceservice>
+	</persistenceservice>
+	<statsservice>
+	</statsservice>
+</newmq>
